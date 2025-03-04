@@ -9,21 +9,19 @@ for (let i = 1; i <= 100; i++) {
     console.log(i);
   }
 }
-function isPrime(num) {
-  if (num < 2) return false;
-  for (let i = 2; i <= Math.sqrt(num); i++) {
-    if (num % i === 0) return false;
+
+let num = 4;
+for (let i = num + 1; num; i++) {
+  let primeNumber = true;
+  for (let j = 2; j < num; j++) {
+    if (num % j === 0) {
+      primeNumber = false;
+      break;
+    } else primeNumber;
   }
-  return true;
+  if (primeNumber) {
+    console.log(num);
+    break;
+  }
 }
 
-function nextPrime(n) {
-  let candidate = n + 1; // Start searching from the next number
-  while (!isPrime(candidate)) {
-    candidate++;
-  }
-  console.log(candidate);
-}
-
-let n = 9;
-nextPrime(n);
